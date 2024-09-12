@@ -2,11 +2,9 @@ import Navbar from "./navbar";
 import Header from "../Header/logo";
 import Pita from "../Header/pita";
 
-export interface SetProps {
-  nama: string
-}
 
-export default function Setting ({nama} : SetProps) {
+
+export default function Setting () {
   return (
     <body>
       <div className="overscroll-auto bg-[#ffffff] h-screen w-full">
@@ -17,7 +15,7 @@ export default function Setting ({nama} : SetProps) {
             <div className="pt-2">
               <div className="h-[50px] w-[290px] bg-[#40A578] mx-8 mt-14">
                 <p className="font-bold text-base" style={{ marginLeft: "120px" }}>
-                  {nama} nama
+                  nama
                 </p>
               </div>
               <div className="flex flex-col space-y-3">
