@@ -5,7 +5,7 @@ import Link from 'next/link';
 export interface ChatmodalProps {
     chatmodal: string
     open: boolean
-    onClose : boolean
+    onClose : () => void
 }
 
 export default function Chatmodal({chatmodal, open, onClose} : ChatmodalProps) {
@@ -13,7 +13,7 @@ export default function Chatmodal({chatmodal, open, onClose} : ChatmodalProps) {
 
     return (
         <>
-            <div className='fixed inset-0 w-screen h-screen opacity-20 bg-black z-10'>'     
+            <div className='fixed inset-0 w-screen h-screen opacity-20 bg-black z-10'>     
             </div>
             <div className='fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#FFFFFF] w-[700px] h-[360px] rounded-[10px] z-20'>
                 <div className='fixed top-4 right-6'>
