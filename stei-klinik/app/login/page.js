@@ -3,7 +3,7 @@
 import { useState, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import GoogleButton from 'react-google-button';
-import { auth, signIn, signOut } from "@/auth";
+import { signIn } from 'next-auth/react';
 
 export default function RegisterPage() {
     const [email, setEmail] = useState('');
