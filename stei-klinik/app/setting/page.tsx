@@ -2,11 +2,11 @@ import Navbar from "./navbar";
 import Header from "../Header/logo";
 import Pita from "../Header/pita";
 
-export interface setprops {
+export interface SetProps {
   nama: string
 }
 
-export default function Setting ({nama} : setprops) {
+export default function Setting ({nama} : SetProps) {
   return (
     <body>
       <div className="overscroll-auto bg-[#ffffff] h-screen w-full">
