@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footerhome = () => {
     return(
         <div className="min-height w-full h-[142px] bg-[#9DDE8B] flex flex-col items-center space-y-2">
-        <p className="text-[#006769] text-[16px] mt-4">Tell us about the positive moments you've had with us!</p>
+        <p className="text-[#006769] text-[16px] mt-4">Tell us about the positive moments you&apos;ve had with us!</p>
         <a href="/feedback">
             <button className="text-[#F4FFE7] bg-[#006769] py-2 px-4 rounded-xl hover:text-[#006769] hover:bg-[#F4FFE7]">
                 Feedback
