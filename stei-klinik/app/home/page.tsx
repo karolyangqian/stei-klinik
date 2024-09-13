@@ -14,6 +14,7 @@ export default function Home() {
     <div className="flex flex-col bg-white">
         <div className="z-10">
             <div className="w-full flex flex-col">
+            
             <div className="flex justify-between items-center bg-white p-4  border-b-2 border-b-[#006769] shadow-md">
                 <div className="flex w-40 h-10">
                     <Header />
@@ -34,18 +35,17 @@ export default function Home() {
                     <div className="text-[#006769] font-semibold w-auto p-1">Features</div>
                     <div className="bg-[#006769] h-0.5 flex-1 rounded-full"></div>
                 </div>
-                    <div>
-                        <div className="flex flex-wrap justify items-center">
-                            <a href="https://student.itb.ac.id/bk/peer" target="_blank"><button className="bg-[#006769] text-[#F4FFE7] px-4 py-2 rounded-full m-2 hover:text-[#006769] hover:bg-transparent border-[#006769] border-2 shadow-md">Pendamping Sebaya ITB</button></a>
-                            <a href="https://six.itb.ac.id/" target="_blank"><button className="bg-[#006769] text-[#F4FFE7] px-4 py-2 rounded-full m-2 hover:text-[#006769] hover:bg-transparent border-[#006769] border-2 shadow-md">Integrasi Direktorat</button></a>
-                            <a href="/chat-dokter"><button className="bg-[#006769] text-[#F4FFE7] px-4 py-2 rounded-full m-2 hover:text-[#006769] hover:bg-transparent border-[#006769] border-2 shadow-md">Info Kesehatan</button></a>
-                            <a href="/chat-dokter"><button className="bg-[#006769] text-[#F4FFE7] px-4 py-2 rounded-full m-2 hover:text-[#006769] hover:bg-transparent border-[#006769] border-2 shadow-md">Chat dengan Dokter</button></a>
-                        </div>
+                <div>
+                    <div className="flex flex-wrap justify items-center">
+                        <a href="https://student.itb.ac.id/bk/peer" target="_blank"><button className="bg-[#006769] text-[#F4FFE7] px-4 py-2 rounded-full m-2 hover:text-[#006769] hover:bg-transparent border-[#006769] border-2 shadow-md">Pendamping Sebaya ITB</button></a>
+                        <a href="https://six.itb.ac.id/" target="_blank"><button className="bg-[#006769] text-[#F4FFE7] px-4 py-2 rounded-full m-2 hover:text-[#006769] hover:bg-transparent border-[#006769] border-2 shadow-md">Integrasi Direktorat</button></a>
+                        <a href="/chat-dokter"><button className="bg-[#006769] text-[#F4FFE7] px-4 py-2 rounded-full m-2 hover:text-[#006769] hover:bg-transparent border-[#006769] border-2 shadow-md">Info Kesehatan</button></a>
+                        <a href="/chat-dokter"><button className="bg-[#006769] text-[#F4FFE7] px-4 py-2 rounded-full m-2 hover:text-[#006769] hover:bg-transparent border-[#006769] border-2 shadow-md">Chat dengan Dokter</button></a>
                     </div>
                 </div>
                 <div className="flex w-full justify-center items-center">
-                    <div className="text-[#006769] font-semibold w-auto p-1">Articles</div>
-                    <div className="bg-[#006769] h-0.5 flex-1 rounded-full"></div>
+                        <div className="text-[#006769] font-semibold w-auto p-1">Articles</div>
+                        <div className="bg-[#006769] h-0.5 flex-1 rounded-full"></div>
                 </div>
                 <div className="w-full bg-[#F4FFE7] p-4 rounded mt-8 text-center flex flex-col items-center shadow">
                     <Image className="flex items-center"
@@ -103,6 +103,7 @@ export default function Home() {
             
         </div>
         <Footer></Footer>    
+    </div>
     </div>
   );
 }
