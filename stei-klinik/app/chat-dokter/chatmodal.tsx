@@ -27,7 +27,7 @@ export default function Chatmodal({chatmodal, open, onClose} : ChatmodalProps) {
                         />
                     </button>
                 </div>
-                <div className='mt-12 ml-6  bg-[#f3faf3] border-[#40A578] border-[1px] h-2/3 w-5/6 flex items-center flex-col justify-center items-center'>
+                <div className='mt-12 ml-6  bg-[#f3faf3] border-[#40A578] border-[1px] h-2/3 w-5/6 flex flex-col justify-center items-center'>
                     <Image
                         className='mt-2'
                         src="/whatsapp.png"

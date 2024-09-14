@@ -3,8 +3,10 @@
 import { useState } from "react";
 import Link from "next/link";
 import Emoji from "./emoji";
+import { loginIsRequiredServer } from "../lib/auth";
 
-export default function Feedback() {
+export default async function Feedback() {
+    await loginIsRequiredServer();
     const [selectedEmoji, setSelectedEmoji] = useState(""); // To store the selected emoji
     const [message, setMessage] = useState(""); // To store the typed message
 
