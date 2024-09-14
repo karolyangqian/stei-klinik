@@ -1,7 +1,9 @@
+'use client';
+
 import Navbar from "./navbar";
 import Header from "../Header/logo";
 import Pita from "../Header/pita";
-
+import { signOut } from "next-auth/react";
 
 
 export default function Setting () {
@@ -21,7 +23,11 @@ export default function Setting () {
               <div className="flex flex-col space-y-3">
                 <Navbar gambar="/icon_chat lines_.png" judul="ChatDokter" href="/chat-dokter" />
                 <Navbar gambar="/icon_password_.png" judul="GantiPassword" href="/gantipassword" />
-                <Navbar gambar="/logout.png" judul="Keluar" href="/logout" />
+                <Navbar gambar="/logout.png" judul="Keluar" href="" 
+                  onClick={() => {
+                    console.log("Signed out");
+                    signOut({callbackUrl: "/"});
+                    }} />
               </div>
             </div>
           </div>
