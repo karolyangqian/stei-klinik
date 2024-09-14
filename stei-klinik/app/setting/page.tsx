@@ -1,10 +1,11 @@
-'use client';
+// 'use client';
 
 import Navbar from "./navbar";
 import Header from "../Header/logo";
 import Pita from "../Header/pita";
 import { signOut } from "next-auth/react";
-import { loginIsRequiredServer } from "../lib/auth";
+import { loginIsRequiredServer } from "@/lib/auth";
+import LogoutButton from "./logoutbutton";
 
 export default async function Setting () {
   await loginIsRequiredServer();
@@ -22,13 +23,9 @@ export default async function Setting () {
                 </p>
               </div>
               <div className="flex flex-col space-y-3">
-                <Navbar gambar="/icon_chat lines_.png" judul="ChatDokter" href="/chat-dokter" />
+                <Navbar gambar="/icon_chat lines_.png" judul="ChatDokter" href="/chat-dokter"/>
                 <Navbar gambar="/icon_password_.png" judul="GantiPassword" href="/gantipassword" />
-                <Navbar gambar="/logout.png" judul="Keluar" href="" 
-                  onClick={() => {
-                    console.log("Signed out");
-                    signOut({callbackUrl: "/"});
-                    }} />
+                <LogoutButton/>
               </div>
             </div>
           </div>

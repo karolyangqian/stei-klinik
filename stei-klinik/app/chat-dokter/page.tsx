@@ -3,7 +3,7 @@ import Boxminggu from "./boxminggu";
 import Logo from '@/public/Logo.png'
 import Image from "next/image";
 import Header from "../Header/logo";
-import { loginIsRequiredServer } from "../lib/auth";
+import { loginIsRequiredServer } from "@/lib/auth";
 
 export default async function Chatdokter() {
     await loginIsRequiredServer();
