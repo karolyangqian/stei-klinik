@@ -11,7 +11,7 @@ import Profile from "../Header/profile"
 import { loginIsRequiredServer } from "../lib/auth";
 
 export default async function Home() {
-    // await loginIsRequiredServer();
+    await loginIsRequiredServer();
   return (
     <div className="flex flex-col bg-white">
         <div className="z-10">

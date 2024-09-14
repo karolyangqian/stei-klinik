@@ -4,9 +4,10 @@ import Navbar from "./navbar";
 import Header from "../Header/logo";
 import Pita from "../Header/pita";
 import { signOut } from "next-auth/react";
+import { loginIsRequiredServer } from "../lib/auth";
 
-
-export default function Setting () {
+export default async function Setting () {
+  await loginIsRequiredServer();
   return (
     <body>
       <div className="overscroll-auto bg-[#ffffff] h-screen w-full">

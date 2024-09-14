@@ -3,8 +3,10 @@ import Boxminggu from "./boxminggu";
 import Logo from '@/public/Logo.png'
 import Image from "next/image";
 import Header from "../Header/logo";
+import { loginIsRequiredServer } from "../lib/auth";
 
-export default function Chatdokter() {
+export default async function Chatdokter() {
+    await loginIsRequiredServer();
 return <body>
      <div className="bg-white">
         <div className="flex justify-between items-center bg-white p-4 shadow-md h-20">

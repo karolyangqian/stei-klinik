@@ -18,7 +18,13 @@ export const authOptions: NextAuthOptions = {
 
 export async function loginIsRequiredServer() {
     const session = await getServerSession(authOptions);
-    if (!session) return redirect("/login");
+    if (!session) {
+        console.log("Session not found");
+        return redirect("/login");
+    }
+    else {
+        console.log("Session found:", session);
+    }
 }
 
 // export function loginIsRequiredClient() {
