@@ -9,19 +9,25 @@ import Link from "next/link"
 import Footer from '@/app/Footer/footerhome'
 import Profile from "../Header/profile"
 import { loginIsRequiredServer } from "@/lib/auth";
+import UserIcon from '@/public/user.png'
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/auth";
 
 export default async function Home() {
     await loginIsRequiredServer();
+    const session = await getServerSession(authOptions);
   return (
     <div className="flex flex-col bg-white">
         <div className="z-10">
             <div className="w-full flex flex-col">
-            
-            <div className="flex justify-between items-center bg-white p-4  border-b-2 border-b-[#006769] shadow-md">
-                <div className="flex w-40 h-10">
-                    <Header />
+                <div className="flex justify-between items-center bg-white p-4  border-b-2 border-b-[#006769] shadow-md">
+                    <div className="flex items-center w-40 h-10">
+                        <Header />
+                    </div>
+                    <div className="flex space-x-4 pr-2">
+                        <Profile nama={session?.user?.name} imagesrc={session?.user?.image ? session.user.image : undefined}/>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
         <div className="p-0">

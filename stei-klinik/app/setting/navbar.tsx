@@ -1,5 +1,6 @@
 'use client';
 import Link from "next/link";
+import Image from "next/image";
 
 export interface navProps {
     gambar: string;
@@ -10,11 +11,11 @@ export interface navProps {
 
 const Navbar = ({ judul, gambar, href, onClick }: navProps) => {
     return (
-        <nav className="border-[1px] border-[#006769] rounded-[10px] h-[40px] w-[290px] mt-5 bg-[#ffffff]" style={{ marginLeft: "33px" }}>
+        <nav className="flex items-center justify-start border-[1px] border-[#006769] rounded-[10px] h-[40px] w-[290px] mt-5 bg-[#ffffff]" style={{ marginLeft: "33px" }}>
             <Link href={href? href : ""} onClick={onClick}> {/* Use the href prop */}
-                <div className="grid grid-cols-11">
-                    <img src={gambar} alt={judul} style={{ width: "23px", height: "23px", marginLeft: "20px", marginTop: "7px" }} />
-                    <p className="text-black" style={{ marginLeft: "40px", marginTop: "8px" }}>{judul}</p>
+                <div className="flex justify-start items-center pl-3">
+                    <Image src={gambar} alt={judul} width={23} height={23} />
+                    <p className="text-black pl-3">{judul}</p>
                 </div>
             </Link>
         </nav>
