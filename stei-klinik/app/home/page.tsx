@@ -47,7 +47,7 @@ export default async function Home() {
                     <div className="flex flex-wrap justify items-center">
                         <a href="https://www.instagram.com/peerbkitb/"/*"https://student.itb.ac.id/bk/peer"*/ target="_blank"><button className="bg-[#006769] text-[#F4FFE7] px-4 py-2 rounded-full m-2 hover:text-[#006769] hover:bg-transparent border-[#006769] border-2 shadow-md">Pendamping Sebaya ITB</button></a>
                         <a href="https://yankes.itb.ac.id/" target="_blank"><button className="bg-[#006769] text-[#F4FFE7] px-4 py-2 rounded-full m-2 hover:text-[#006769] hover:bg-transparent border-[#006769] border-2 shadow-md">Integrasi Direktorat</button></a>
-                        <a href="/chat-dokter"><button className="bg-[#006769] text-[#F4FFE7] px-4 py-2 rounded-full m-2 hover:text-[#006769] hover:bg-transparent border-[#006769] border-2 shadow-md">Info Kesehatan</button></a>
+                        <a href="/info-kesehatan"><button className="bg-[#006769] text-[#F4FFE7] px-4 py-2 rounded-full m-2 hover:text-[#006769] hover:bg-transparent border-[#006769] border-2 shadow-md">Info Kesehatan</button></a>
                         <a href="/chat-dokter"><button className="bg-[#006769] text-[#F4FFE7] px-4 py-2 rounded-full m-2 hover:text-[#006769] hover:bg-transparent border-[#006769] border-2 shadow-md">Chat dengan Dokter</button></a>
                     </div>
                 </div>
