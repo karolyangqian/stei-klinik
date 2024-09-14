@@ -8,7 +8,7 @@ import Header from '@/app/Header/logo'
 import Link from "next/link"
 import Footer from '@/app/Footer/footerhome'
 import Profile from "../Header/profile"
-import { loginIsRequiredServer } from "../lib/auth";
+import { loginIsRequiredServer } from "@/lib/auth";
 
 export default async function Home() {
     await loginIsRequiredServer();
@@ -39,8 +39,8 @@ export default async function Home() {
                 </div>
                 <div>
                     <div className="flex flex-wrap justify items-center">
-                        <a href="https://student.itb.ac.id/bk/peer" target="_blank"><button className="bg-[#006769] text-[#F4FFE7] px-4 py-2 rounded-full m-2 hover:text-[#006769] hover:bg-transparent border-[#006769] border-2 shadow-md">Pendamping Sebaya ITB</button></a>
-                        <a href="https://six.itb.ac.id/" target="_blank"><button className="bg-[#006769] text-[#F4FFE7] px-4 py-2 rounded-full m-2 hover:text-[#006769] hover:bg-transparent border-[#006769] border-2 shadow-md">Integrasi Direktorat</button></a>
+                        <a href="https://www.instagram.com/peerbkitb/"/*"https://student.itb.ac.id/bk/peer"*/ target="_blank"><button className="bg-[#006769] text-[#F4FFE7] px-4 py-2 rounded-full m-2 hover:text-[#006769] hover:bg-transparent border-[#006769] border-2 shadow-md">Pendamping Sebaya ITB</button></a>
+                        <a href="https://yankes.itb.ac.id/" target="_blank"><button className="bg-[#006769] text-[#F4FFE7] px-4 py-2 rounded-full m-2 hover:text-[#006769] hover:bg-transparent border-[#006769] border-2 shadow-md">Integrasi Direktorat</button></a>
                         <a href="/chat-dokter"><button className="bg-[#006769] text-[#F4FFE7] px-4 py-2 rounded-full m-2 hover:text-[#006769] hover:bg-transparent border-[#006769] border-2 shadow-md">Info Kesehatan</button></a>
                         <a href="/chat-dokter"><button className="bg-[#006769] text-[#F4FFE7] px-4 py-2 rounded-full m-2 hover:text-[#006769] hover:bg-transparent border-[#006769] border-2 shadow-md">Chat dengan Dokter</button></a>
                     </div>
@@ -98,7 +98,7 @@ export default async function Home() {
                 </div>
                 <br/>
                 <button className=" rounded-full border-2 border-[#006769] px-4 py-2 text-[#006769] font-bold hover:bg-[#006769] hover:text-[#F4FFE7] m-4 shadow-md">
-                <Link href = "/pilih-artikel">Lihat Berita Lainnya</Link>
+                <Link href = "/articles">Lihat Berita Lainnya</Link>
                 </button>   
                 
             </div>

@@ -8,7 +8,7 @@
 import { NextResponse, NextRequest } from "next/server";
 
 export async function middleware(req: NextRequest) {
-  console.log("middleware success");
+  // console.log("middleware success");
 
   const response = NextResponse.next();
 

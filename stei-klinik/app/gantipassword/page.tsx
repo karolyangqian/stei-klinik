@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Header from "../Header/logo";
 import Pita from "../Header/pita";
-import { loginIsRequiredServer } from "../lib/auth";
+import { loginIsRequiredServer } from "@/lib/auth";
 
 
 export default async function gantipassword() {
