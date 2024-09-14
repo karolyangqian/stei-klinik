@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Header from "../Header/logo";
 import Pita from "../Header/pita";
+import { loginIsRequiredServer } from "../lib/auth";
 
-
-export default function gantipassword2() {
+export default async function gantipassword2() {
+    await loginIsRequiredServer();
     return <body>
         <div className="overscroll-auto bg-[#F9F9F9] h-screen w-screen">
             <Header/>

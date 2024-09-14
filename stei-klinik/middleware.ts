@@ -7,11 +7,23 @@
 
 import { NextResponse, NextRequest } from "next/server";
 
-export function middleware(req: NextRequest) {
+export async function middleware(req: NextRequest) {
+  console.log("middleware success");
+
   const response = NextResponse.next();
-  const themePreference = req.cookies.get("theme");
-  if (!themePreference) {
-    response.cookies.set("theme", "light");
-  }
+
   return response;
 }
+
+// Uncomment jika ingin menjalankan middleware pada path tertentu.
+// Saat ini tidak perlu karena page protection sudah diatur di dalam page.tsx (kecuali articles, login, dan register).
+// export const config = {
+//   matcher: [
+//     "/home", 
+//     "/chat-dokter", 
+//     "/setting", 
+//     "/articles", 
+//     "/feedback", 
+//     "/gantipassword", "/gantipassword2", "/gantipassword3",
+//   ],
+// };
