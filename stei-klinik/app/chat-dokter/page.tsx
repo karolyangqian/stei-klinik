@@ -4,13 +4,26 @@ import Logo from '@/public/Logo.png'
 import Image from "next/image";
 import Header from "../Header/logo";
 import { loginIsRequiredServer } from "@/lib/auth";
+import Profile from "../Header/profile";
+import { authOptions } from "@/lib/auth";
+import { getServerSession } from "next-auth";
 
 export default async function Chatdokter() {
     await loginIsRequiredServer();
+    const session = await getServerSession(authOptions);
 return <body>
      <div className="bg-white">
-        <div className="flex justify-between items-center bg-white p-4 shadow-md h-20">
-            <Header/>
+     <div className="z-10">
+            <div className="w-full flex flex-col">
+                <div className="flex justify-between items-center bg-white p-4  border-b-2 border-b-[#006769] shadow-md">
+                    <div className="flex items-center w-40 h-10">
+                        <Header />
+                    </div>
+                    <div className="flex space-x-4 pr-2">
+                        <Profile nama={session?.user?.name} imagesrc={session?.user?.image ? session.user.image : undefined}/>
+                    </div>
+                </div>
+            </div>
         </div>
         <div className="flex justify-between h-[71px] bg-[#006769] m-0">
             <div className="flex justify-center items-center px-10">

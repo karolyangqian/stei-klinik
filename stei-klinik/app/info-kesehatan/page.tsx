@@ -6,10 +6,29 @@ import Artikel from '@/public/Artikel.png'
 import Header from '@/app/Header/logo'
 import Link from "next/link"
 import Footer from '@/app/Footer/footerhome'
+import Profile from "../Header/profile"
+import { loginIsRequiredServer } from "@/lib/auth";
+import UserIcon from '@/public/user.png'
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/auth";
 
-export default function Home() {
+export default async function Home() {
+    await loginIsRequiredServer();
+    const session = await getServerSession(authOptions);
   return (
     <div className="flex flex-col bg-white text-black h-screen">
+        <div className="z-10">
+            <div className="w-full flex flex-col">
+                <div className="flex justify-between items-center bg-white p-4  border-b-2 border-b-[#006769] shadow-md">
+                    <div className="flex items-center w-40 h-10">
+                        <Header />
+                    </div>
+                    <div className="flex space-x-4 pr-2">
+                        <Profile nama={session?.user?.name} imagesrc={session?.user?.image ? session.user.image : undefined}/>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div className="bg-[#006769] text-center p-4 text-[#d9d9d9] font-bold text-3xl mb-4">NOMOR DARURAT</div>
         <div className="flex flex-row flex-wrap justify-center bg-white text-black space-y-4 space-x-4 items-center px-2">
             <div className="bg-[#006769] rounded-md p-2 shadow-lg">
