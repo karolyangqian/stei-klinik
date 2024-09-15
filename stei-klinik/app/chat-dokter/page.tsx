@@ -16,14 +16,6 @@ return <body>
             <div className="flex justify-center items-center px-10">
                 <p className="text-[#FFFFFF] text-xl">Jadwal Chat Dokter</p>
             </div>
-            <div className="flex space-x-4 pr-10">
-                    <button className="bg-[#006769] text-white px-4 py-2 hover:bg-white hover:text-[#006769] hover:transition">
-                        Login
-                    </button>
-                    <button className="bg-[#006769] text-white px-4 py-2 hover:bg-white hover:text-[#006769] transition">
-                        Sign Up
-                    </button>
-            </div>
         </div>
         <div className="text-sm text-[#006769] text-center p-4 font-bold">
         Berikut adalah jadwal chat per minggu. Silakan chat sesuai jadwal yang telah ditentukan. Jika mengirim pesan di luar jadwal, maka pesan tidak akan dibalas oleh dokter.

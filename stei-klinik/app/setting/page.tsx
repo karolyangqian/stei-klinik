@@ -16,7 +16,7 @@ export default async function Setting () {
   const session = await getServerSession(authOptions);
   console.log("Page session", session);
   return (
-      <div className=" bg-[#ffffff] h-screen w-full">
+      <div className=" bg-white">
       <Header/>
       <Pita judul="Profil dan Pengaturan"/>
         <div className="flex ">
